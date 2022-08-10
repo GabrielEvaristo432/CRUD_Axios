@@ -1,0 +1,40 @@
+{
+  "carros": [
+    {
+      "nome": "Lamborghini Aventador",
+      "modelo": "Roadster",
+      "ano": 2002,
+      "velocidade_maxima": "350 km/h",
+      "potencia": "770cv",
+      "aceleracao": "2.9s",
+      "id": 1
+    },
+    {
+      "nome": "Bugatti Chiron",
+      "modelo": "Super Sport",
+      "ano": "2018",
+      "velocidade_maxima": "440km/h",
+      "potencia": "1600cv",
+      "aceleracao": "5,8s",
+      "id": 2
+    },
+    {
+      "nome": "Dodge Challenger",
+      "modelo": "R/T",
+      "ano": "2021",
+      "velocidade_maxima": "259km/h",
+      "potencia": "491cv",
+      "aceleracao": "5,4s",
+      "id": 3
+    },
+    {
+      "nome": "Corvette C6",
+      "modelo": "Z06",
+      "ano": "2006",
+      "velocidade_maxima": "305km/h",
+      "potencia": "505cv",
+      "aceleracao": "5.1",
+      "id": 4
+    }
+  ]
+}
