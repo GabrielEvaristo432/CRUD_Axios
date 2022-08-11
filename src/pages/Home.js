@@ -1,19 +1,32 @@
 import carrosServices from "../services/carrosServices"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function Home() {
 
   const[carros, setCarros] = useState([])
 
-  async function Listar () {
-      await carrosServices.listarCarros()
+  let navigateTo = useNavigate()
+
+  async function Listar() {
+    await carrosServices.listarCarros()
       .then(res => setCarros(res.data))
   }
 
   async function Excluir (id) {
-    await carrosServices.excluircarro(id)
+    await carrosServices.excluirCarro(id)
     .then(() => Listar())
+  }
+
+  function CarregarEdicao (nome, modelo, ano, velocidade_maxima, potencia, aceleracao, id) {
+    sessionStorage.setItem("nome", nome)
+    sessionStorage.setItem("modelo", modelo)
+    sessionStorage.setItem("ano", ano)
+    sessionStorage.setItem("velocidade_maxima", velocidade_maxima)
+    sessionStorage.setItem("potencia", potencia)
+    sessionStorage.setItem("aceleracao", aceleracao)
+    sessionStorage.setItem("id", id)
+    navigateTo("/edicao")
   }
 
   useEffect(() => {
@@ -79,17 +92,13 @@ function Home() {
                     <td>{c.potencia}</td>
                     <td>{c.aceleracao}</td>
                     <td>
-                      <Link to="/editar">
-                        <button>
-                          Editar
-                        </button>
-                      </Link>
+                      <button onClick={() => CarregarEdicao(c.nome, c.modelo, c.ano, c.velocidade_maxima, c.potencia, c.aceleracao, c.id)}>
+                        Editar
+                      </button>
 
-                      
-                        <button onClick={() => Excluir(c.id)}>
-                          Excluir
-                        </button>
-                      
+                      <button onClick={() => Excluir(c.id)}>
+                        Excluir
+                      </button>
                     </td>
                 </tr>
             ))}

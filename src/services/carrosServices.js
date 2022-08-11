@@ -16,7 +16,7 @@ async function editarCarro(id, carro) {
   return response
 }
 
-async function excluircarro(id) {
+async function excluirCarro(id) {
   const response = await axios.delete(`${link}/carros/${id}`)
   return response
 }
@@ -25,7 +25,7 @@ const carrosServices = {
   listarCarros,
   adicionarCarro,
   editarCarro,
-  excluircarro
+  excluirCarro
 }
 
 export default carrosServices

@@ -3,10 +3,10 @@
     {
       "nome": "Lamborghini Aventador",
       "modelo": "Roadster",
-      "ano": 2002,
+      "ano": "2002",
       "velocidade_maxima": "350 km/h",
       "potencia": "770cv",
-      "aceleracao": "2.9s",
+      "aceleracao": "2,9s",
       "id": 1
     },
     {
@@ -28,13 +28,22 @@
       "id": 3
     },
     {
-      "nome": "Corvette C6",
-      "modelo": "Z06",
-      "ano": "2006",
-      "velocidade_maxima": "305km/h",
-      "potencia": "505cv",
-      "aceleracao": "5.1",
-      "id": 4
+      "nome": "Ford 250",
+      "modelo": "Raptor",
+      "ano": "2015",
+      "velocidade_maxima": "300km/h",
+      "potencia": "700cv",
+      "aceleracao": "4,9s",
+      "id": 5
+    },
+    {
+      "nome": "Wolksvagem Polo",
+      "modelo": "Sedan",
+      "ano": "2014",
+      "velocidade_maxima": "220km/h",
+      "potencia": "120cv",
+      "aceleracao": "7,0s",
+      "id": 6
     }
   ]
 }
